@@ -14,7 +14,7 @@ For the installation instruction, please, refer to https://github.com/anchore/sy
 git clone https://github.com/TrustSource/ts-docker.git
 ```
 
-- Install using PIP from the local directory
+- Install using PIP from the base directory (where you have cloned the repo in)
 ```shell
 pip3 install ./ts-docker 
 ```
