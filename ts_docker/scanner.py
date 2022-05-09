@@ -7,14 +7,13 @@ from typing import List
 from pathlib import Path
 from docker.client import DockerClient
 from docker.models.images import Image
-from docker.errors import ImageNotFound
+from docker.errors import ImageNotFound, DockerException
 
 from ts_python_client import Scan, Dependency, Scanner
 from ts_spdx_import.importer import SPDXImporter
 
 from . import info, success, fail
 
-dockerApi = DockerClient()
 
 class DockerScanner(Scanner):
     def __init__(self, image: str, sbom_tool: str):
@@ -43,7 +42,13 @@ class DockerScanner(Scanner):
         image_data = None
 
         try:
+            dockerApi = DockerClient()
             image_data = dockerApi.images.get(self.image)
+
+        except DockerException as err:
+            fail('Docker error: {}'.format(err))
+            exit(2)
+
         except ImageNotFound:
             fail('Image not found: {}'.format(self.image))
             exit(2)
