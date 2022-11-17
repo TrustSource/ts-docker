@@ -12,13 +12,13 @@ repos:
       - id: double-quote-string-fixer
       - id: end-of-file-fixer
       - id: forbid-new-submodules
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.0.0a5 # tag to search in the repo above
+#  - repo: https://github.com/pre-commit/mirrors-pylint
+#    rev: v3.0.0a5 # tag to search in the repo above
     # PLEASE NOTE: pre-commit runs pylint from an isolated virtualenv. 
     # Many of pylint's checks perform dynamic analysis which will fail there.
     # You may find configuring pylint as a local hook more useful.
-    hooks:
-      - id: pylint # name of the test tool/check
+#    hooks:
+#      - id: pylint # name of the test tool/check
      #   -   id: pylint
      #       name: pylint
      #       entry: pylint
@@ -48,19 +48,19 @@ repos:
         #language: python
         #language_version: python3
         #types: [python]
-  - repo: https://github.com/asottile/dead
-    # checks for dead code, see https://github.com/asottile/dead for options
-    rev: v1.5.0
-    hooks:
-      - id: dead
+#  - repo: https://github.com/asottile/dead
+#    # checks for dead code, see https://github.com/asottile/dead for options
+#    rev: v1.5.0
+#    hooks:
+#      - id: dead
   - repo: https://github.com/syntaqx/git-hooks
     rev: v0.0.17
     hooks:
       - id: shellcheck
-  - repo: git://github.com/jstewmon/check-swagger
-    sha: v0.1.4
-    hooks:
-      - id: check-swagger
+#  - repo: git://github.com/jstewmon/check-swagger
+#    rev: v0.1.4
+#    hooks:
+#      - id: check-swagger
   - repo: https://github.com/pre-commit/mirrors-csslint
     rev: ''  # Use the sha / tag you want to point at
     # Please add a .csslintrc file to your project. 
@@ -79,10 +79,10 @@ repos:
           - src/license_header.txt        # defaults to: LICENSE.txt
           - --comment-style
           - //                            # defaults to:  #
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.32.2
-    hooks:
-      - id: markdownlint
+#  - repo: https://github.com/igorshubovych/markdownlint-cli
+#    rev: v0.32.2
+#    hooks:
+#      - id: markdownlint
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.76.0
     hooks:

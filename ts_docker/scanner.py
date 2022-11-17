@@ -17,16 +17,17 @@ from . import info, success, fail
 
 class DockerScanner(Scanner):
     def __init__(self, image: str, sbom_tool: str):
+        """
+        some comment
+        """
         super().__init__()
 
         self.image = image
         self.sbom_tool = sbom_tool
 
-
     @property
     def is_folder_scanner(self):
         return False
-
 
     def run(self) -> Scan:
         scan = Scan(module=self.image, ns='docker')
@@ -37,8 +38,10 @@ class DockerScanner(Scanner):
 
         return scan
 
-
     def scan(self, tmpdir: str) -> [Dependency]:
+        """
+        scan action
+        """
         image_data = None
 
         try:
@@ -60,12 +63,12 @@ class DockerScanner(Scanner):
 
         name, vers = DockerScanner.parse_tag(image_data)
 
-        dep = Dependency(key='docker:{}'.format(name), name=name, versions=vers)
+        dep = Dependency(key='docker:{}'.format(
+            name), name=name, versions=vers)
         dep.meta = DockerScanner.build_metadata(image_data)
         dep.dependencies = image_scan.dependencies
 
         return [dep]
-
 
     def scan_image(self, tmpdir: str, image: str) -> Scan:
         output = Path('{}/{}.spdx.json'.format(tmpdir, image))
@@ -76,7 +79,6 @@ class DockerScanner(Scanner):
         info('Parsing packages SPDX')
 
         return SPDXImporter.parse_doc(output)
-
 
     @staticmethod
     def parse_tag(image_data: Image) -> Tuple[str, List[str]]:

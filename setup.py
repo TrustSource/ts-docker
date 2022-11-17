@@ -35,3 +35,6 @@ setup(
         'console_scripts': ['ts-docker=ts_docker.cli:main'],
     },
 )
+"""
+provides a setup routine to install ts-docker cli
+"""

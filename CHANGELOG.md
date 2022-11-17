@@ -2,11 +2,11 @@
 
 ## 1.0.0
 
-### Changed:
+### Changed
 
-	- README
+- README
 
-### Added:
-	- core functionality
-	- pre-commit settings
+### Added
 
+- core functionality
+- pre-commit settings

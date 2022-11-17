@@ -7,7 +7,6 @@ from .scanner import DockerScanner
 from ts_python_client.client import Client
 
 
-
 @click.command()
 @click.option('--syft-path', default=None, help='Path to the Syft executable.')
 @click.option('--apiKey', default='', help='API Key.')
@@ -17,6 +16,10 @@ from ts_python_client.client import Client
 @click.option('--outputFile', default='', help='Path to the output file (to write).')
 @click.argument('image', required=True)
 def main(syft_path, apikey, projectname, skiptransfer, settingsfile, outputfile, image):
+    """
+    execute scan
+    """
+
     sbom_tool = find_executable('syft', syft_path)
 
     if not sbom_tool:
