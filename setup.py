@@ -11,7 +11,7 @@ setup(
 
     author='EACG GmbH',
 
-    license='ASL-2.0',
+    license='Apache-2.0',
 
     url='https://github.com/TrustSource/ts-docker.git',
 
