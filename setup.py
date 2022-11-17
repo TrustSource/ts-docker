@@ -11,7 +11,7 @@ setup(
 
     author='EACG GmbH',
 
-    license='ASL-2.0',
+    license='Apache-2.0',
 
     url='https://github.com/TrustSource/ts-docker.git',
 
@@ -35,3 +35,6 @@ setup(
         'console_scripts': ['ts-docker=ts_docker.cli:main'],
     },
 )
+"""
+provides a setup routine to install ts-docker cli
+"""
