@@ -5,7 +5,7 @@ setup(
 
     packages=['ts_docker'],
 
-    version='1.1.0',
+    version='1.2.0',
 
     description='A Docker scanner for TrustSource (https://app.trustsource.io) to manage open source code compliance',
 
@@ -25,8 +25,9 @@ setup(
         'click',
         'wasabi',
         'docker',
-        'ts-python-client==1.2.0',
-        'ts-spdx-import @ git+https://github.com/TrustSource/ts-spdx-upload.git@1.1.0#egg=ts-spdx-import'
+        'ts-python-client==1.3.0',
+        'ts-spdx-import @ git+https://github.com/TrustSource/ts-spdx-upload.git@1.2.0#egg=ts-spdx-import'
+        'setuptools'
     ],
 
     scripts=['ts-docker'],
