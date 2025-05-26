@@ -3,6 +3,9 @@
 [![Gitter](https://badges.gitter.im/TrustSource/community.svg)](https://gitter.im/TrustSource/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ![Supported Versions](https://img.shields.io/badge/Python-3.7,%203.8-blue)
 
+[!WARNING]
+>PLEASE NOTE! This repository will be archived. We have moved all capabilities into [ts-scan](https://trustsource.github.io/ts-scan) tool, our **swiss army knife for SCA**.
+
 This is a wrapper for Syft, allowing to decompose a docker image - pulled from default
 registry - and transferring the results to TrustSource or writing it into a local JSON.
 
