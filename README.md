@@ -6,6 +6,9 @@
 This is a wrapper for Syft, allowing to decompose a docker image - pulled from default
 registry - and transferring the results to TrustSource or writing it into a local JSON.
 
+[!WARNING]
+PLEASE NOTE! ts-sdocker is not under active development anymore. Please use [ts-scan](https://github.com/trustsource/ts-scan) instead. ts-scan has all the capabilities ts-docker aimed to provide and much more.  
+
 # Prerequisites
 
 **Syft** - a tool for generating a Software Bill of Materials (SBOM) from container images
