@@ -1,3 +1,7 @@
+# Deprecation Notice
+> [!NOTE]
+> Please note, that we discontinued the development of this tooling. It has been migrated into **[ts-scan](https://github.com/trustsource/ts-scan)** and will be continued there. This repository is just left for reference pupropses.
+
 # TrustSource Docker scanner
 
 [![Gitter](https://badges.gitter.im/TrustSource/community.svg)](https://gitter.im/TrustSource/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
